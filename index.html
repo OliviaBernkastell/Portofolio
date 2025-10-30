@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Assidiq - Web Developer & AI Engineer</title>
+
+    <!-- Favicon AA -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232563eb' rx='20'/><text x='50' y='65' text-anchor='middle' fill='white' font-size='48' font-family='Arial, sans-serif' font-weight='bold'>AA</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232563eb' rx='20'/><text x='50' y='65' text-anchor='middle' fill='white' font-size='48' font-family='Arial, sans-serif' font-weight='bold'>AA</text></svg>">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232563eb' rx='20'/><text x='50' y='65' text-anchor='middle' fill='white' font-size='48' font-family='Arial, sans-serif' font-weight='bold'>AA</text></svg>">
+
+    <!-- Meta tags -->
+    <meta name="description" content="Albert Assidiq - Web Developer & AI Engineer specializing in modern web technologies and artificial intelligence solutions">
+    <meta name="keywords" content="Web Developer, AI Engineer, React, Node.js, Python, Machine Learning, Portfolio">
+    <meta name="author" content="Albert Assidiq">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Albert Assidiq - Web Developer & AI Engineer">
+    <meta property="og:description" content="Passionate Web Developer & AI Engineer creating innovative digital experiences with cutting-edge technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://albert-assidiq.github.io/portfolio/">
+    <meta property="og:site_name" content="Albert Assidiq Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232563eb' rx='20'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='48' font-family='Arial, sans-serif' font-weight='bold'%3EAA%3C/text%3E%3C/svg%3E">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/svg+xml">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Albert Assidiq - Web Developer & AI Engineer">
+    <meta name="twitter:description" content="Passionate Web Developer & AI Engineer creating innovative digital experiences with cutting-edge technologies">
+    <meta name="twitter:url" content="https://albert-assidiq.github.io/portfolio/">
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232563eb' rx='20'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='48' font-family='Arial, sans-serif' font-weight='bold'%3EAA%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:site" content="@albert_assidiq">
+    <meta name="twitter:creator" content="@albert_assidiq">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://albert-assidiq.github.io/portfolio/">
+    <script>
+        // Prevent flash of unstyled content
+        (function() {
+            const savedTheme = localStorage.getItem('darkMode');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'true' || (!savedTheme && systemDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-primary: 'Space Grotesk', 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+            --font-display: 'Exo 2', 'Space Grotesk', sans-serif;
+            --font-accent: 'Rajdhani', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+
+        /* Typography Classes */
+        .font-display {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .font-mono {
+            font-family: var(--font-mono);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        .font-accent {
+            font-family: var(--font-accent);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        /* Enhanced Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 6rem); }
+        h2 { font-size: clamp(2rem, 5vw, 4rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .gradient-text:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.3));
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: .2em solid #2563eb;
+            white-space: nowrap;
+            animation: typing 4s steps(40, end), blink-caret 1s step-end infinite;
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #2563eb; }
+        }
+
+        .progress-bar {
+            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glow {
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .text-shadow {
+            text-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
+        }
+
+        .tech-stack-icon {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tech-stack-icon:hover {
+            transform: translateY(-8px) rotate(8deg) scale(1.1);
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
+        }
+
+        /* Tooltip improvements */
+        .tech-stack-icon .group-hover\:opacity-100 {
+            z-index: 9999 !important;
+        }
+
+        /* Mobile-specific tooltip behavior */
+        @media (max-width: 768px) {
+            .tech-stack-icon .absolute {
+                pointer-events: none;
+                z-index: 9999 !important;
+            }
+
+            /* Disable hover on mobile to prevent interference */
+            .tech-stack-icon:hover {
+                transform: translateY(-4px) scale(1.05);
+            }
+
+            .tech-stack-icon:hover .absolute {
+                opacity: 0 !important;
+            }
+        }
+
+        .gradient-border {
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+            padding: 2px;
+            border-radius: 0.75rem;
+        }
+
+        .magnetic-button {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: var(--font-accent);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        /* WhatsApp button hover fix for dark mode */
+        .dark a[href*="wa.me"]:hover {
+            border-color: #0891b1 !important;
+        }
+
+
+
+        /* Clean up unused styles */
+
+        .loading-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+
+        /* Enhanced Dark Mode - FORCEFUL */
+        .dark {
+            color-scheme: dark !important;
+        }
+
+        .dark body {
+            background: #0f172a !important;
+            color: #e2e8f0 !important;
+        }
+
+        .dark #app-body {
+            background: #0f172a !important;
+            color: #e2e8f0 !important;
+        }
+
+        /* Force all backgrounds to dark */
+        .dark * {
+            background-color: transparent !important;
+        }
+
+        .dark .bg-slate-50,
+        .dark .bg-white,
+        .dark .bg-gray-50,
+        .dark .bg-gray-100,
+        .dark .bg-gray-200 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .bg-slate-800,
+        .dark .bg-slate-900,
+        .dark .bg-gray-800,
+        .dark .bg-gray-900 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .bg-slate-700,
+        .dark .bg-gray-700 {
+            background-color: #1e293b !important;
+        }
+
+        /* Force text colors */
+        .dark .text-slate-900,
+        .dark .text-gray-900,
+        .dark .text-slate-800,
+        .dark .text-gray-800 {
+            color: #f1f5f9 !important;
+        }
+
+        .dark .text-slate-600,
+        .dark .text-slate-700,
+        .dark .text-gray-600,
+        .dark .text-gray-700 {
+            color: #cbd5e1 !important;
+        }
+
+        .dark .text-slate-300,
+        .dark .text-slate-400,
+        .dark .text-gray-300,
+        .dark .text-gray-400 {
+            color: #94a3b8 !important;
+        }
+
+        .dark .text-slate-500,
+        .dark .text-gray-500 {
+            color: #64748b !important;
+        }
+
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #0e7490 100%) !important;
+        }
+
+        .dark .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+        }
+
+        .dark .gradient-text:hover {
+            filter: drop-shadow(0 4px 8px rgba(96, 165, 250, 0.4)) !important;
+        }
+
+        /* Network particles canvas */
+        #hero-canvas {
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+                opacity: 0.05;
+            }
+            50% {
+                transform: translateY(-3px);
+                opacity: 0.1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes slideInTop {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes slideInBottom {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+        }
+
+      /* Code rain effect */
+        .code-rain::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(59, 130, 246, 0.01) 2px,
+                    rgba(59, 130, 246, 0.01) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(59, 130, 246, 0.01) 2px,
+                    rgba(59, 130, 246, 0.01) 4px
+                );
+            animation: codeRain 20s linear infinite;
+        }
+
+        .dark .code-rain::before {
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(96, 165, 250, 0.005) 2px,
+                    rgba(96, 165, 250, 0.005) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(96, 165, 250, 0.005) 2px,
+                    rgba(96, 165, 250, 0.005) 4px
+                );
+        }
+
+        @keyframes codeRain {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        /* Dark mode overrides - IMPORTANT! */
+        .dark nav {
+            background: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(20px);
+        }
+
+        /* Home section dark mode */
+        .dark section#home,
+        .dark #home {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+        }
+
+        .dark #home .absolute {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+        }
+
+        .dark .from-slate-50,
+        .dark .via-blue-50,
+        .dark .to-cyan-50 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .from-slate-900,
+        .dark .via-slate-800,
+        .dark .to-slate-900 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .bg-slate-50 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .bg-slate-900 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .bg-slate-800 {
+            background-color: #1e293b !important;
+        }
+
+        .dark .bg-white {
+            background-color: #1e293b !important;
+        }
+
+        .dark .bg-gray-50 {
+            background-color: #0f172a !important;
+        }
+
+        .dark .bg-gray-100 {
+            background-color: #1e293b !important;
+        }
+
+        .dark .bg-gray-800 {
+            background-color: #1e293b !important;
+        }
+
+        .dark .bg-gray-900 {
+            background-color: #0f172a !important;
+        }
+
+        /* Text colors */
+        .dark .text-slate-900 {
+            color: #f1f5f9 !important;
+        }
+
+        .dark .text-slate-600 {
+            color: #cbd5e1 !important;
+        }
+
+        .dark .text-slate-300 {
+            color: #cbd5e1 !important;
+        }
+
+        .dark .text-slate-400 {
+            color: #94a3b8 !important;
+        }
+
+        .dark .text-gray-900 {
+            color: #f1f5f9 !important;
+        }
+
+        .dark .text-gray-600 {
+            color: #cbd5e1 !important;
+        }
+
+        .dark .text-gray-700 {
+            color: #e2e8f0 !important;
+        }
+
+        .dark .text-gray-300 {
+            color: #cbd5e1 !important;
+        }
+
+        .dark .text-gray-400 {
+            color: #94a3b8 !important;
+        }
+
+        /* Button and interactive elements */
+        .dark .bg-gray-200 {
+            background-color: #374151 !important;
+        }
+
+        .dark .bg-gray-700 {
+            background-color: #374151 !important;
+        }
+
+        .dark .text-gray-700 {
+            color: #e2e8f0 !important;
+        }
+
+        .dark .text-gray-300 {
+            color: #cbd5e1 !important;
+        }
+
+        /* Border colors */
+        .dark .border-gray-200 {
+            border-color: #334155 !important;
+        }
+
+        .dark .border-gray-600 {
+            border-color: #475569 !important;
+        }
+
+        .dark .border-gray-700 {
+            border-color: #334155 !important;
+        }
+
+        .dark .border-slate-600 {
+            border-color: #475569 !important;
+        }
+
+        /* Dark mode toggle button */
+        .dark #darkModeToggle {
+            background-color: #374151 !important;
+            color: #f1f5f9 !important;
+        }
+
+        .dark #darkModeToggle:hover {
+            background-color: #4b5563 !important;
+        }
+
+        /* Welcome badge dark mode */
+        .dark .bg-blue-100 {
+            background-color: #1e3a8a !important;
+        }
+
+        .dark .text-blue-700 {
+            color: #60a5fa !important;
+        }
+
+        .dark .dark\:bg-blue-900\/30 {
+            background-color: rgba(30, 58, 138, 0.3) !important;
+        }
+
+        .dark .dark\:text-blue-300 {
+            color: #93c5fd !important;
+        }
+
+        /* Skill tags dark mode - FORCE OVERRIDE */
+        .dark .bg-blue-100,
+        .dark .dark\:bg-blue-900 {
+            background-color: #1e3a8a !important;
+        }
+
+        .dark .text-blue-800,
+        .dark .dark\:text-blue-200 {
+            color: #93c5fd !important;
+        }
+
+        /* All skill tags variants */
+        .dark .bg-green-100,
+        .dark .bg-yellow-100,
+        .dark .bg-red-100,
+        .dark .bg-purple-100,
+        .dark .bg-indigo-100,
+        .dark .bg-pink-100 {
+            background-color: #1e293b !important;
+        }
+
+        .dark .text-green-800,
+        .dark .text-yellow-800,
+        .dark .text-red-800,
+        .dark .text-purple-800,
+        .dark .text-indigo-800,
+        .dark .text-pink-800 {
+            color: #cbd5e1 !important;
+        }
+
+        /* Dark mode skill text in skills section */
+        .dark .text-gray-700 {
+            color: #e2e8f0 !important;
+        }
+
+        /* Typography improvements */
+        .text-fluid {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+        }
+
+        .text-fluid-lg {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+        }
+
+        .text-fluid-xl {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            h1 { font-size: clamp(2rem, 10vw, 3rem); }
+            h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+            h3 { font-size: clamp(1.25rem, 4vw, 1.5rem); }
+
+            .typewriter {
+                font-size: clamp(1rem, 4vw, 1.25rem);
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            /* Mobile About Section */
+            #about .grid.md\\:grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            #about .grid.md\\:grid-cols-2 > div:first-child {
+                order: -1; /* Put photo first on mobile */
+            }
+
+            #aboutPhotoContainer {
+                max-width: 300px;
+                margin: 0 auto !important;
+            }
+
+            /* Mobile: top-aligned photo like desktop */
+            @media (max-width: 767px) {
+                #aboutPhoto {
+                    align-items: flex-start !important;
+                    justify-content: center !important;
+                    padding-top: 1rem !important;
+                }
+
+                #aboutPhotoImage {
+                    object-position: top !important;
+                }
+
+                #aboutPhotoIcon {
+                    margin-top: 2rem;
+                }
+
+                /* Mobile hero spacing */
+                .hero-content h1 {
+                    margin-top: 2rem !important;
+                }
+
+                .hero-content h1 span:first-child {
+                    margin-bottom: 1.5rem !important;
+                }
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #1e40af 0%, #0e7490 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-300" id="app-body">
+
+    <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-transparent dark:border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold font-display gradient-text">AA</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm" data-translate="nav.home">Home</a>
+                    <a href="#about" class="nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm" data-translate="nav.about">About</a>
+                    <a href="#skills" class="nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm" data-translate="nav.skills">Skills</a>
+                    <a href="#portfolio" class="nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm" data-translate="nav.portfolio">Portfolio</a>
+                    <a href="#contact" class="nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm" data-translate="nav.contact">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                    <button id="langToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300" title="Switch Language">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t border-transparent dark:border-transparent shadow-lg">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#home" class="block px-3 py-2 nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-md text-sm" data-translate="nav.home">Home</a>
+                <a href="#about" class="block px-3 py-2 nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-md text-sm" data-translate="nav.about">About</a>
+                <a href="#skills" class="block px-3 py-2 nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-md text-sm" data-translate="nav.skills">Skills</a>
+                <a href="#portfolio" class="block px-3 py-2 nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-md text-sm" data-translate="nav.portfolio">Portfolio</a>
+                <a href="#contact" class="block px-3 py-2 nav-link font-accent text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-md text-sm" data-translate="nav.contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-16 transition-colors duration-300 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300">
+            <!-- Animated network particles background -->
+            <canvas id="hero-canvas" class="absolute inset-0"></canvas>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="hero-content">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-8">
+                    <span class="block text-slate-900 dark:text-white mb-4" data-translate="hero.greeting">Hi, I'm</span>
+                    <span class="gradient-text text-shadow">Albert Assidiq</span>
+                </h1>
+                <div class="text-xl sm:text-2xl md:text-3xl mb-8 text-slate-600 dark:text-slate-300 font-mono font-semibold">
+                    <span id="typewriter" class="inline-block min-h-[1.2em]"></span>
+                </div>
+                <p class="text-fluid-lg mb-16 max-w-4xl mx-auto text-slate-600 dark:text-slate-400 leading-relaxed" data-translate="hero.description">
+                    Passionate Web Developer & AI Engineer creating innovative digital experiences with cutting-edge technologies
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <!-- Download CV disabled for now -->
+                    <!-- <button class="magnetic-button gradient-bg text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:shadow-xl transform transition-all duration-300">
+                        <i class="fas fa-download mr-2"></i> Download CV
+                    </button> -->
+                    <a href="https://wa.me/6281370501796?text=Hi%20Albert,%20I'm%20interested%20in%20your%20web%20development%20services" target="_blank" class="magnetic-button inline-block border-2 border-blue-500 text-blue-500 dark:border-cyan-400 dark:text-cyan-400 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-blue-500 hover:text-white hover:border-blue-500 dark:hover:bg-cyan-500 dark:hover:text-white dark:hover:border-cyan-500 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Me
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6 mb-12">
+                    <a href="https://github.com/OliviaBernkastell" target="_blank" class="group cursor-pointer transform transition-all duration-300 hover:scale-110">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
+                            <i class="fab fa-github text-3xl sm:text-4xl text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/albert-assidiq/" target="_blank" class="group cursor-pointer transform transition-all duration-300 hover:scale-110">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
+                            <i class="fab fa-linkedin text-3xl sm:text-4xl text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@assidiqalbert" target="_blank" class="group cursor-pointer transform transition-all duration-300 hover:scale-110">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
+                            <i class="fab fa-medium text-3xl sm:text-4xl text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="floating">
+                    <i class="fas fa-chevron-down text-2xl sm:text-3xl text-blue-600 dark:text-blue-400 animate-bounce"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16">
+                <span class="gradient-text">About Me</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative" id="aboutPhotoContainer">
+                    <div class="gradient-border h-full">
+                        <div class="bg-white dark:bg-gray-800 p-2 rounded-md h-full">
+                            <div id="aboutPhoto" class="w-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-lg flex items-start justify-center overflow-hidden relative pt-4">
+                                <i id="aboutPhotoIcon" class="fas fa-user text-blue-600 dark:text-blue-400 text-6xl"></i>
+                                <img id="aboutPhotoImage" class="absolute inset-0 w-full h-full object-cover object-top hidden" alt="Albert Assidiq">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-6 text-gray-900 dark:text-white">
+                        Building the Future of Web & AI
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        I'm a passionate Web Developer and AI Engineer with extensive experience creating innovative digital solutions.
+                        My expertise spans from modern web technologies to cutting-edge artificial intelligence applications.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        I specialize in building responsive, user-friendly applications that leverage the power of AI to create
+                        intelligent, adaptive experiences. From sleek frontend interfaces to complex backend systems,
+                        I bring ideas to life through code.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Problem Solver</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Team Player</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Fast Learner</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Detail Oriented</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">10</div>
+                            <div class="text-gray-600 dark:text-gray-400">Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">2+</div>
+                            <div class="text-gray-600 dark:text-gray-400">Years</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">2+</div>
+                            <div class="text-gray-600 dark:text-gray-400">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 relative bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16">
+                <span class="gradient-text">Skills & Technologies</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">15+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold" data-translate="skills.frontend">Frontend Projects</div>
+
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">12+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold" data-translate="skills.backend">Backend Projects</div>
+
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">8+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-semibold" data-translate="skills.ai">AI/ML Projects</div>
+
+                </div>
+            </div>
+            <div class="text-center">
+                <h3 class="text-2xl font-display font-bold mb-8 text-gray-900 dark:text-white">Tech Stack</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-html5 text-4xl text-orange-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            HTML5
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            CSS
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-js text-4xl text-yellow-400"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            JavaScript
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <img src="https://flowbite.s3.amazonaws.com/brand/logo-dark/mark/flowbite-logo.png" alt="Flowbite" class="w-10 h-10 object-contain">
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Flowbite
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-react text-4xl text-blue-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            React
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-vuejs text-4xl text-green-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Vue.js
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-node text-4xl text-green-600"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Node.js
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-python text-4xl text-yellow-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Python
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-docker text-4xl text-blue-600"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Docker
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-laravel text-4xl text-red-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Laravel
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <img src="https://avatars.githubusercontent.com/u/51960834?s=280&v=4" alt="Livewire" class="w-10 h-10 object-contain">
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Livewire
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fab fa-git text-4xl text-red-500"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Git
+                        </div>
+                    </div>
+                    <div class="tech-stack-icon bg-white dark:bg-gray-700 p-4 rounded-lg shadow-lg group relative">
+                        <i class="fas fa-database text-4xl text-gray-600"></i>
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50" style="z-index: 9999 !important;">
+                            Database
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16">
+                <span class="gradient-text">Portfolio</span>
+            </h2>
+            <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio items will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16">
+                <span class="gradient-text" data-translate="contact.title">Get In Touch</span>
+            </h2>
+            <div class="text-center max-w-4xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-display font-bold mb-8 text-gray-900 dark:text-white" data-translate="contact.subtitle">Let's Work Together</h3>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed" data-translate="contact.description">
+                    I'm always interested in hearing about new projects and opportunities.
+                    Feel free to reach out directly via WhatsApp for a quick response!
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                    <a href="https://wa.me/6281370501796?text=Hi%20Albert,%20I'm%20interested%20in%20your%20web%20development%20services" target="_blank" class="group flex items-center space-x-4 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fab fa-whatsapp text-3xl group-hover:animate-pulse"></i>
+                        <div class="text-left">
+                            <div class="font-bold" data-translate="contact.whatsappChat">Chat on WhatsApp</div>
+                            <div class="text-sm opacity-90">+62 813-7050-1796</div>
+                        </div>
+                    </a>
+
+                    <a href="mailto:assidiqalbert@gmail.com" class="group flex items-center space-x-4 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-envelope text-3xl group-hover:animate-bounce"></i>
+                        <div class="text-left">
+                            <div class="font-bold" data-translate="contact.sendEmail">Send Email</div>
+                            <div class="text-sm opacity-90">assidiqalbert@gmail.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h4 class="text-xl font-display font-bold mb-6 text-gray-900 dark:text-white text-center" data-translate="contact.otherWays">Other Ways to Connect</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        <a href="https://github.com/OliviaBernkastell" target="_blank" class="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105">
+                            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-github text-3xl text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+                            </div>
+                            <div class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">GitHub</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400" data-translate="contact.githubDesc">Check out my code</div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/albert-assidiq/" target="_blank" class="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105">
+                            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-linkedin text-3xl text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+                            </div>
+                            <div class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">LinkedIn</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400" data-translate="contact.linkedinDesc">Professional network</div>
+                        </a>
+                        <a href="https://medium.com/@assidiqalbert" target="_blank" class="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105">
+                            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-medium text-3xl text-slate-600 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"></i>
+                            </div>
+                            <div class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Medium</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400" data-translate="contact.mediumDesc">Read my articles</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Copyright -->
+    <footer class="py-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    <span class="inline-flex items-center space-x-2">
+                        <i class="fas fa-code text-blue-600 dark:text-blue-400"></i>
+                        <span>© 2025 Albert Assidiq. All rights reserved.</span>
+                        <i class="fas fa-heart text-red-500 dark:text-red-400 animate-pulse"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
